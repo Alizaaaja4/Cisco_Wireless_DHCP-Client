@@ -1,6 +1,4 @@
 # Cisco Wireless DHCP-Client 
-Pratice Simulation Wireless Network witch DHCP-Client in Cisco Packet Tracer
-
 Repository Title : Simulation of Wireless DHCP Client in Cisco Packet Tracer
 
 Description : This simulation aims to visualize the concept of using a wireless connection with a DHCP Client. There are six rooms, each equipped with two computers, three laptops, two tablets, two smartphones, and two printers. All these devices are connected to a wireless network using the Access Point. The simulation is designed to demonstrate the functions and configuration of wireless connections in an office network environment.
@@ -21,3 +19,14 @@ Description : This simulation aims to visualize the concept of using a wireless 
 
 ## DHCP Client
 DHCP client is a software or hardware device on a computer network that automatically sends requests to obtain IP address configurations and other network information from a DHCP server. The DHCP client is used to dynamically configure IP addresses and other network settings, allowing devices to connect to the network without manual configuration.
+
+    Router> enable
+    Router# configure terminal
+    Router(config-if)# interface (ex: fa0/0)
+    Router(config-if)# no shutdown
+    Router(config-if)# ip address (ex: 192.168.10.1 ) subnetmask
+    Router(config-if)# ip dhcp pool (ex: WIrelles1)
+    Router(dhcp-config)# default-router (ex: 192.168.10.1)
+    Router(dhcp-config)# network (ex: 192.168.10.0) 255.255.255.0
+    Router(dhcp-config)# dns-server (ex: 8.8.8.8)
+    
